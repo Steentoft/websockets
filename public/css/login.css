@@ -1,0 +1,62 @@
+
+html{
+    margin: 0px;
+    padding: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body{
+    background: rgb(238, 78, 78) 100%;
+    font-family: "Nunito", sans-serif;
+    color: #5a5a5a;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.login-container{
+    padding: 2%;
+    background: white;
+    box-shadow: 5px 5px 20px black;
+    width: 40%;
+    height: auto;
+    min-height: 45%;
+    margin: 25%;
+    border-radius: 1%;
+    font-size: 1vw !important;
+    overflow: hidden;
+}
+
+.pe-enabled{
+    cursor: pointer;
+}
+
+.page{
+    margin-bottom: 3%;
+}
+
+.login-container > div {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-login{
+    width: 100%;
+    font-size: 1vw !important;
+}
+
+.btn-register{
+    width: 49%;
+    font-size: 1vw !important;
+
+}
+
+.form-control{
+    font-size: 1vw !important;
+}
+
+#registration{
+    margin-top: 10.9%;
+}

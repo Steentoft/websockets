@@ -1,0 +1,101 @@
+html{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body{
+    background: rgb(238, 78, 78) 100%;
+    font-family: "Nunito", sans-serif;
+    color: #5a5a5a;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    margin-bottom: 0px;
+    color: #5a5a5a;
+}
+
+.dropdown-name{
+    font-size: 18px;
+}
+
+.dropdown-item{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dropdown-menu{
+    width: 100%;
+}
+
+.content-box{
+    background: white;
+    box-shadow: 5px 5px 20px black;
+    width: 95%;
+    height: 88%;
+    border-radius: 0.5vw;
+    margin: 1vw;
+}
+
+.w-97{
+    width: 97%;
+}
+
+.font-18px{
+    font-size: 18px;
+}
+
+.pl-0{
+    padding-left: 0px;
+}
+
+.pr-0{
+    padding-right: 0px;
+}
+
+.content-box-body{
+    height: calc(100% - 105px);
+}
+
+.nav-item{
+    width: 33.3%;
+    text-align: center;
+}
+
+.tab-img{
+    height: 30px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: .45rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(27, 27, 27, .7);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.requests{
+    background: red;
+    width: 20%;
+    height: 15%;
+    color: black;
+    border-radius: 25px;
+    margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.requests-tab{
+    display: flex;
+    justify-content: center;
+}
