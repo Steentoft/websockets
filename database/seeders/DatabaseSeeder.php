@@ -13,6 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $user = new \App\Models\User();
+
+        $user->name = "Christian";
+        $user->email = "chrsteentoft@gmail.com";
+        $user->setPasswordAttribute("ideapadgaming");
+
+        $user->save();
+
+        $user = new \App\Models\User();
+
+        $user->name = "Steentoft";
+        $user->email = "christeentoft@gmail.com";
+        $user->setPasswordAttribute("ideapadgaming");
+
+        $user->save();
     }
 }

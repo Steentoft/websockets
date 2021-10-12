@@ -8,13 +8,18 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="nav-item"><a class="nav-link active" href="#friendlist" aria-controls="1" role="tab" data-toggle="tab"><img class="tab-img" src="{{ asset('assets/img/people.svg') }}"/></a></li>
                         <li role="presentation" class="nav-item"><a class="nav-link" href="#add" aria-controls="2" role="tab" data-toggle="tab"><img class="tab-img" src="{{ asset('assets/img/person-plus.svg') }}"/></a></li>
-                        <li role="presentation" class="nav-item"><a class="nav-link requests-tab" href="#requests" aria-controls="3" role="tab" data-toggle="tab"><img class="tab-img" src="{{ asset('assets/img/person.svg')}}"/> <h6 class="requests">7</h6></a></li>
+                        <li role="presentation" class="nav-item"><a class="nav-link requests-tab" href="#requests" aria-controls="3" role="tab" data-toggle="tab"><img class="tab-img" src="{{ asset('assets/img/person.svg')}}"/> <h6 class="requests">0</h6></a></li>
                     </ul>
                 </div>
                 <div class="content-box-body p-2">
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="friendlist" aria-labelledby="friendlist">
                             <input type="text" class="form-control font-18px" placeholder="Search in your contactlist...">
+                            <ul id="app">
+                                <li v-for="contact in contacts" :key="contact.id">
+                                    @{{ contact.id }}
+                                </li>
+                            </ul>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="add" aria-labelledby="add">
                             <input type="text" class="form-control font-18px" placeholder="Search for new contacts...">
@@ -48,4 +53,27 @@
             </div>
         </div>
     </div>
+
+{{--        <script src="{{ asset('js/app.js') }}"></script>--}}
+{{--        <script>--}}
+{{--            Echo.channel('home')--}}
+{{--                .listen('NewMessage', (e) => {--}}
+{{--                    console.log(e.message);--}}
+{{--                })--}}
+{{--        </script>--}}
+
+@endsection
+
+@section('scripts')
+
+    <script>
+        const app = new Vue({
+                el: '#app',
+            data: {
+                contacts: {"id":1,"user_a":1,"user_b":2,"created_at":null,"updated_at":null},
+                user: {!! Auth::check() ? Auth::user()->toJson() : 'null' !!},
+            },
+        })
+    </script>
+
 @endsection

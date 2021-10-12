@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\BaseController::class, 'index'])->name('index');
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('auth.dashboard')->middleware('auth');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+
+Route::resource("dashboard", '\App\Http\Controllers\DashboardController');
+//Route::resource("contacts", '\App\Http\Controllers\ContactsController');
+//Route::resource("dashboard", '\App\Http\Controllers\MessagesController');
+//Route::resource("dashboard", '\App\Http\Controllers\RequestsController');
 
 Auth::routes();
 
