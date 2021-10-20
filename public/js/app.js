@@ -5266,10 +5266,9 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
-var app = new Vue({
-  el: '#app'
-});
+// const app = new Vue({
+//     el: '#app',
+// });
 
 /***/ }),
 
@@ -5316,7 +5315,8 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "KEY12345",
   cluster: "mt1",
-  forceTLS: true
+  wsHost: window.location.hostname,
+  wsPort: 6001
 });
 
 /***/ }),

@@ -35,6 +35,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function contacts()
+    {
+        return $this->belongsToMany('App\Models\Contacts');
+    }
+
     public function setPasswordAttribute($password) {
         $this->attributes["password"] = Hash::make($password);
     }

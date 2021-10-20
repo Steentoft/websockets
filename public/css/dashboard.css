@@ -41,9 +41,13 @@ h1{
     background: white;
     box-shadow: 5px 5px 20px black;
     width: 95%;
-    height: 88%;
+    height: 95%;
     border-radius: 0.5vw;
     margin: 1vw;
+}
+
+.h-100{
+    height: calc(100% - 70px) !important;
 }
 
 .w-97{
@@ -63,7 +67,30 @@ h1{
 }
 
 .content-box-body{
-    height: calc(100% - 105px);
+    height: 76.5vh;
+}
+
+.ml-a{
+    margin-left: auto !important;
+}
+
+.content-box-body-messages{
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+    /*justify-content: end;*/
+}
+
+.content-box-body-message{
+    background: rgb(238, 78, 78) 100%;
+    color: black;
+    font-size: 18px;
+    padding: 0.5% 1.0% 0.5% 1.0%;
+    width: fit-content;
+    margin: 5px 5px 0px 10px;
+    border-radius: 5px;
+
 }
 
 .nav-item{
@@ -103,3 +130,86 @@ h1{
     display: flex;
     justify-content: center;
 }
+
+label{
+    display: inherit;
+}
+
+.dataTables_wrapper .dataTables_filter{
+    float: left !important;
+    text-align: left !important;
+    width: 100%;
+}
+
+input[type=search]{
+/*    font-size: 18px !important;*/
+    margin: 0px !important;
+/*    display: block;*/
+    width: 100%;
+    padding: 0.375rem 0.75rem !important;
+/*    font-weight: 400;*/
+/*    line-height: 1.6;*/
+/*    color: #212529;*/
+    background-color: #f8fafc !important;
+/*    background-clip: padding-box;*/
+/*    border: 1px solid #ced4da !important;*/
+/*    -webkit-appearance: none;*/
+/*    -moz-appearance: none;*/
+/*    appearance: none;*/
+    border-radius: 0.25rem !important;
+/*    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;*/
+}
+
+/*.input[type=search]:active {*/
+/*    color: #212529 !important;*/
+/*    background-color: #f8fafc !important;*/
+/*    border-color: #9ac8ee !important;*/
+/*    outline: 0 !important;*/
+/*    box-shadow: 0 0 0 0.25rem rgba(52, 144, 220, 0.25) !important;*/
+/*}*/
+
+.contact-box{
+    margin-top: 2%;
+    background: rgb(255, 104, 104) 100%;
+    padding: 2%;
+    color: black;
+    display: flex;
+    border-radius: 5px;
+}
+
+.contact-box:hover{
+    background: rgb(255, 65, 65) 100%;
+    cursor: pointer;
+}
+
+.contact-box-title{
+    margin-bottom: 0px !important;
+}
+
+.contact-box-misc{
+    display: flex;
+    align-items: center;
+}
+
+.contact-box-misc-request{
+    display: flex;
+    align-items: center;
+}
+
+.request-response:hover{
+    background-color: rgba(148, 148, 148, 0.5);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.contact-box-misc:hover{
+    background-color: rgba(148, 148, 148, 0.5);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.form-text{
+    margin-top: 0px;
+    color: gainsboro;
+}
+

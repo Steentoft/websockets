@@ -93,12 +93,15 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
-{{--    <script src="{{ asset('js/app.js') }}"></script>--}}
-{{--    <script>--}}
-{{--        Echo.channel('home')--}}
-{{--            .listen('NewMessage', (e) => {--}}
-{{--                console.log(e.message);--}}
-{{--            })--}}
-{{--    </script>--}}
+    <script>
+        window.Echo.connector.pusher.connection.bind('connected', () => {
+            console.log('connected');
+        });
+
+        Echo.channel('home')
+            .listen('NewMessage', (e) => {
+                console.log(e.message);
+            });
+    </script>
 
 @endsection

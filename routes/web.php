@@ -17,10 +17,11 @@ Route::get('/', [App\Http\Controllers\BaseController::class, 'index'])->name('in
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
+Route::get('/dashboard/acceptRequest', [App\Http\Controllers\DashboardController::class, 'acceptRequest']);
 Route::resource("dashboard", '\App\Http\Controllers\DashboardController');
-//Route::resource("contacts", '\App\Http\Controllers\ContactsController');
-//Route::resource("dashboard", '\App\Http\Controllers\MessagesController');
-//Route::resource("dashboard", '\App\Http\Controllers\RequestsController');
+Route::resource("contacts", '\App\Http\Controllers\ContactsController');
+Route::resource("requests", '\App\Http\Controllers\RequestsController');
+Route::resource("messages", '\App\Http\Controllers\MessagesController');
 
 Auth::routes();
 
